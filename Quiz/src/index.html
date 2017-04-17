@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello World!</title>
+    <link rel="stylesheet" type="text/css" href="quiz.css"/>
+    <script src="bundle.js"></script>
+
+    <script>
+        var quizConfiguration = {
+            submitLabel: "Soumettre mes r\u00E9ponses",
+            title: "Bienvenue sur le quiz",
+            validationScore: 80, /*p.c.*/
+            validationMessages: "",
+            nullificationMessage: "",
+            className: {
+                questionContainer: "questionContainer",
+                questionText: "questionText",
+                choicesContainer: "choicesContainer",
+                answersContentDivPositive: "positive",
+                answersContentDivNegative: "negative ",
+                choice: "choice",
+                feedbackContainer: "feedback",
+                positiveFeedback: "positive",
+                negativeFeedback: "negative"
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="top_header">
+            <div class="logo"></div>
+        </div>
+        <div class="middle_header"></div>
+        <div class="middle_header_2">
+            <span id="quizTitle" class="title_quiz"></span>
+        </div>
+    </div>
+    <div id="content">
+
+        <div id="result">
+            Vous avez obtenu
+            <BR />
+            <SPAN id=score></SPAN>
+            <BR /> de bonnes réponses.
+            <BR />
+            <BR />
+            <B id="guidance"></B>
+        </div>
+
+        <div id="quizContainer"></div>
+
+        <div id="buttonsContent" class="confirmContainer">
+            <button kmonclick="Quiz.validate()" id="submit" class="btnValid">Valider vos réponses</button>
+            <button onclick="Quiz.reset()" id="reset" class="btnValid" style="display:none">Recommencer</button>
+        </div>
+    </div>
+    <br>
+    <br>
+</body>>
+
+</html>
